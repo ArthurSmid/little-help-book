@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using AirtableApiClient;
+using LittleHelpBook.Server.Services;
 
 namespace LittleHelpBook.Server
 {
@@ -25,6 +27,7 @@ namespace LittleHelpBook.Server
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddSingleton(new AirTableService(Configuration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
