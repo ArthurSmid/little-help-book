@@ -350,11 +350,6 @@ main {
 
 @media screen and (max-width: 1056px) {
 
-
-  #mobile-help-container {
-    display: inline;
-  }
-
   .mobile-container {
       display: inline;
   }
