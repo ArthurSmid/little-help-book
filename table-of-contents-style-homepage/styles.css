@@ -342,9 +342,18 @@ main {
   display: none;
 }
 
+#mobile-help-container {
+  display: none;
+}
+
 /* responsive transition to tablet */
 
 @media screen and (max-width: 1056px) {
+
+
+  #mobile-help-container {
+    display: inline;
+  }
 
   .mobile-container {
       display: inline;
@@ -534,3 +543,7 @@ footer .bold-inline {
 }
 
 }
+
+/* begin Find Help mobile page styles */
+
+

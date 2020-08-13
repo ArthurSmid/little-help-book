@@ -158,9 +158,9 @@
             <div class="are-you-in-crisis">Are you in <div class="popup" onclick="crisisPopup()"><span class="blue-text">crisis</span>?<span class="popuptext" id="myPopup">A crisis is defined personally by each individual who reaches out to White Bird Clinic. It can be a difficult or dangerous time, but it is also an opportunity for change. Anxiety, depression, grief, trauma, identity issues, abuse, interpersonal conflict, and other external or internal factors can contribute to a time of crisis. If you find your ability to access your own resources is compromised by a crisis event, please reach out to us on our 24/7 crisis line at 541-687-4000 or 1-800-422-7558 or click the Emergency Crisis Lines button for a complete listing of phone numbers.</span>
             </div>
 
-            <button onclick="emergencyCrisis()" class="emergency-button"> <span class="emergency-text">Emergency Crisis Lines</span></button>   
+              <button onclick="emergencyCrisis()" class="emergency-button"> <span class="emergency-text">Emergency Crisis Lines</span></button>   
 
-        </div>
+            </div>
             <div class="a-z-list">To browse service providers by name, see our <a href="#" class="blue-text">A to Z list.</a></div>
             <div class="community-sponsors">Community Sponsors</div>
             <div class="subcategory">
@@ -192,11 +192,37 @@
                 <div class="people-care">People care.</div>
                 <h3 class="find-help-in-lane">Find help in Lane County, Oregon. Available by phone or in person.</h3>
                 <div class="buttons">
-                    <button class="help-button">Find Help</button>
+
+                    <!-- this is for the button on the first intro-screen -->
+                    <div class="help" onclick="findHelp()"> 
+                      
+                      <button class="help-button">Find Help</button>
+
+                      <section id="helpButton">
+
+                        <div id="mobile-help-container">
+
+                          <!-- the Find Help mobile intro screen contents go here -->          
+                          <header class="logo-title">
+                            <img src="white-bird-on-black.png" alt="White Bird Clinic" width="42" height="42">
+                            <h1 class="little-help-book">Little Help Book</h1>
+                            <div class="black-top"></div>
+                          </header>
+                          <main class="crisis-container">
+                          </main>
+                        </div>
+                      </section>
+                    </div>
+                    <!-- end contents of the second intro screen -->
+
                     <button class="spanish-button">Español</button>
                 </div>
             </main>
         <footer>Human service resource guide powered by <h2 class="bold-inline h123-reset">White Bird Clinic</h2></footer>
+    </div>
+
+    </main>
+
     </div>
     <script src="homepage.js">
     </script>
