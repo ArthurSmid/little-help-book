@@ -23,6 +23,10 @@ a {
   width: 100%;
 }
 
+header {
+  transition: 0.5s;
+}
+
 .desktop-header {
   display: flex;
   justify-content: space-between;
