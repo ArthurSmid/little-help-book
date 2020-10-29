@@ -24,73 +24,74 @@
 </head>
 <body>
     <div class="container">
-        <header class="desktop-header">
-            <a class="homepage-link" href="index.html">
-                <img class="desktop-logo" src="white-bird-on-black.png" alt="White Bird Clinic" width="42" height="42">
-                <h1 class="little-help-book">Little Help Book</h1>
-            </a>
+        <header id="navbar" >
+            <div class="desktop-header"> 
+                <a class="homepage-link" href="index.html">
+                    <img class="desktop-logo" src="white-bird-on-black.png" alt="White Bird Clinic" width="42" height="42">
+                    <h1 class="little-help-book">Little Help Book</h1>
+                </a>
 
-            <div class="description">Human Services Resource Directory</div>
+                <div class="description">Human Services Resource Directory</div>
 
-            <!-- Gets filled dynamically -->
-            <div class="breadcrumb-box">
-                <div class="find-help">Find help in</div>
-                <select class="breadcrumb city" id="citySelect">
-                    <option value=""><em>Loading...</em></option>
-                    <option value="">Lane County, Oregon</option>
-                </select>
-            </div>
-
-            <nav class="header-nav">
-                <button class="header-nav-item spanish menu-button">Español</button>
-                <button class="header-nav-item about menu-button">
-                    <a class="about" href="about.html">About</a>
-                </button>
-
-                <div class="header-nav-item search">
-                    <input type="image" src="images/search-24px.svg" class="search-toggle" type="search">
-                </div>
-            </nav>
-        </header>
-        <div class="nav-container">
-            <div class="city-selection">
-                <div class="mobile-breadcrumb-box">
+                <!-- Gets filled dynamically -->
+                <div class="breadcrumb-box">
                     <div class="find-help">Find help in</div>
-                    <select class="mobile-breadcrumb city" id="citySelect">
+                    <select class="breadcrumb city" id="citySelect">
                         <option value=""><em>Loading...</em></option>
                         <option value="">Lane County, Oregon</option>
                     </select>
                 </div>
+                <nav class="header-nav">
+                    <button class="header-nav-item spanish menu-button">Español</button>
+                    <button class="header-nav-item about menu-button">
+                        <a class="about" href="about.html">About</a>
+                    </button>
+
+                    <div class="header-nav-item search">
+                        <input type="image" src="images/search-24px.svg" class="search-toggle" type="search">
+                    </div>
+                </nav>
             </div>
-            <div class="menu-container">
-                <div class="menu-options">
-                    <div class="menu-item">SERVICES</div>
-                    <div class="menu-item"><a href="providers.html">PROVIDERS</a></div>
-                    <div class="menu-item"><a href="map.html">MAP</a></div>
-                    <div>
-                        <div class="mobile-header-nav-item mobile-search">
-                            <input type="image" src="images/search-24px.svg" class="search-toggle" type="search">
-                        </div>
+            <div class="nav-container">
+                <div class="city-selection">
+                    <div class="mobile-breadcrumb-box">
+                        <div class="find-help">Find help in</div>
+                        <select class="mobile-breadcrumb city" id="citySelect">
+                            <option value=""><em>Loading...</em></option>
+                            <option value="">Lane County, Oregon</option>
+                        </select>
                     </div>
                 </div>
-                <div>
-                    <hr>
+                <div class="menu-container">
+                    <div class="menu-options">
+                        <div class="menu-item">SERVICES</div>
+                        <div class="menu-item"><a href="providers.html">PROVIDERS</a></div>
+                        <div class="menu-item"><a href="map.html">MAP</a></div>
+                        <div>
+                            <div class="mobile-header-nav-item mobile-search">
+                                <input type="image" src="images/search-24px.svg" class="search-toggle" type="search">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="search-wrapper hidden" id="searchWrapper">
-            <form class="search-form">
-                <div class="search-flexbox" role="search">
-                    <div class="search-text-and-button-container">
-                        <label class="search-label" for="search">Type keywords and press Search
-                            <p id="error" role="alert"></p>
-                        </label>
-                        <input class="search-button" type="button" value="Search">
-                     </div>
-                    <input id="searchInput" class="search-input" type="text">
-                </div>
-            </form>
-        </div>
+            <div class="search-wrapper hidden" id="searchWrapper">
+                <form class="search-form">
+                    <div class="search-flexbox" role="search">
+                        <div class="search-text-and-button-container">
+                            <label class="search-label" for="search">Type keywords and press Search
+                                <p id="error" role="alert"></p>
+                            </label>
+                            <input class="search-button" type="button" value="Search">
+                         </div>
+                        <input id="searchInput" class="search-input" type="text">
+                    </div>
+                </form>
+            </div>
+        </header>
         <!-- Main will be filled with data from the database, formatted as specified in the handlebars template below. -->
         <main id="table-of-contents" class="table-of-contents">
             <h3><em>Loading...</em><h3>
@@ -158,6 +159,21 @@
             <div>Powered by <a href="https://whitebirdclinic.org/">White Bird Clinic</a> | <a href="terms-of-use.html" class="terms-of-use">Terms of Use</a></div> 
         </footer>
     </div>
+
+    <script>
+        var lastScrollTop = 0;
+            navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function(){
+            var scrollTop = window.pageYOffset || document
+            .documentElement.scrollTop;
+            if (scrollTop > lastScrollTop){
+                navbar.style.top="-80px";
+            }else{
+            navbar.style.top="0";
+            }
+        lastScrollTop = scrollTop;
+        })
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="homepage.js"></script>
