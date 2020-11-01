@@ -166,3 +166,13 @@ function classChange() {
     document.getElementById("mobile").className = "";
   }
 }
+
+
+window.onload = function(){
+    document.getElementById("b-anchor").addEventListener("click", addMargin);
+}
+
+function addMargin(){
+    document.getElementById("b-selected").className = "b-margin";
+}
+
