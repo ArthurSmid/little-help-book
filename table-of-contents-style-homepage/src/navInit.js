@@ -38,7 +38,7 @@ function initData(hasCat, hasSubcat, hasMap) {
         categoryTable = categoryTable.filter(x => x.id != "recxvFI6Cc7hpuYBi");
         // remove the Essential Crisis Lines element from categories
         categoryTable = categoryTable.filter(x => x.id !=  "recRckNwH09CWFAys");
-       
+
 
         nbc = (hasMap) ?
             new NavBreadcrumb(cityTable, categoryTable, subcatTable, placeTable, mymap) :
@@ -85,7 +85,7 @@ function initData(hasCat, hasSubcat, hasMap) {
         // Show the city-category-subcategory from the query in the navigation
         document.getElementById(cityboxId).value = cityValue;
         citySelectEvent();
-        
+
 
         if (hasCat) {
             categoryValue = (urlParams.has('category') ? urlParams.get('category') : 'NA')
@@ -119,6 +119,7 @@ function initLanguage() {
 }
 
 let theButton = document.querySelector('#languageToggle');
+let theButton = document.querySelector('#pageLanguageToggle')
 theButton.addEventListener("click", toggleLanguage);
 
 function toggleLanguage() {
@@ -159,7 +160,7 @@ function toggleLanguage() {
 function citySelectEvent() {
     // find the city by id, and set the focused city to it.
     if (this.id == cityboxId) {
-        nbc.focused.city = nbc.cities.find(x => x.id === document.getElementById(cityboxId).value).id;        
+        nbc.focused.city = nbc.cities.find(x => x.id === document.getElementById(cityboxId).value).id;
     }
     if (this.id == cityboxMobId) {
         nbc.focused.city = nbc.cities.find(x => x.id === document.getElementById(cityboxMobId).value).id;
@@ -177,11 +178,11 @@ function citySelectEvent() {
     nbc.availableCategories = nbc.filterCategoryOptions();
     // Change available categories to select from when city changes
     if (availData.cat) {
-        nbc.placeOptionElements(catboxId, nbc.generateOptionElements(nbc.availableCategories));   
+        nbc.placeOptionElements(catboxId, nbc.generateOptionElements(nbc.availableCategories));
     }
     nbc.availableSubcats = nbc.filterSubcatOptions();
     if (availData.subcat) {
-        nbc.placeOptionElements(subcatboxId, nbc.generateOptionElements(nbc.availableSubcats));   
+        nbc.placeOptionElements(subcatboxId, nbc.generateOptionElements(nbc.availableSubcats));
     }
     updateDom();
 }
