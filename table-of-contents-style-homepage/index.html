@@ -51,17 +51,7 @@
                     <input type="image" src="images/search-24px.svg" class="search-toggle" type="search">
                 </div>
             </nav>
-        </header>
-        <div class="nav-container">
-            <div class="city-selection">
-                <div class="mobile-breadcrumb-box">
-                    <div class="find-help">Find help in</div>
-                    <select class="mobile-breadcrumb city" id="citySelect-mobile">
-                        <option value=""><em>Loading...</em></option>
-                        <option value="">Lane County, Oregon</option>
-                    </select>
-                </div>
-            </div>
+
             <div class="menu-container">
                 <div class="menu-options">
                     <div class="menu-item">SERVICES</div>
@@ -77,20 +67,22 @@
                     <hr>
                 </div>
             </div>
-        </div>
-        <div class="search-wrapper hidden" id="searchWrapper">
-            <form class="search-form">
-                <div class="search-flexbox" role="search">
-                    <div class="search-text-and-button-container">
-                        <label class="search-label" for="search">Type keywords and press Search
-                            <p id="error" role="alert"></p>
-                        </label>
-                        <input class="search-button" type="button" value="Search">
-                     </div>
-                    <input id="searchInput" class="search-input" type="text">
-                </div>
-            </form>
-        </div>
+           
+            <div class="search-wrapper hidden" id="searchWrapper">
+                <form class="search-form">
+                    <div class="search-flexbox" role="search">
+                        <div class="search-text-and-button-container">
+                            <label class="search-label" for="search">Type keywords and press Search
+                                <p id="error" role="alert"></p>
+                            </label>
+                            <input class="search-button" type="button" value="Search">
+                         </div>
+                        <input id="searchInput" class="search-input" type="text">
+                    </div>
+                </form>
+            </div>
+        </header>
+
         <!-- Main will be filled with data from the database, formatted as specified in the handlebars template below. -->
         <main id="table-of-contents" class="table-of-contents">
             <h3><em>Loading...</em><h3>

@@ -381,6 +381,10 @@ main {
   display: none;
 }
 
+.menu-container {
+  display: none;
+}
+
 .mobile-emergency-container {
   display: none;
 }
